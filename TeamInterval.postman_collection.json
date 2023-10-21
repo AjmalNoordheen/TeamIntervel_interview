@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "e5afe3de-18a5-431d-82d7-31646f8a6bb5",
+		"name": "TeamInterval",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26251569",
+		"_collection_link": "https://interstellar-meadow-985884.postman.co/workspace/68359e4a-2408-44fa-8e4f-32de2064525e/collection/26251569-e5afe3de-18a5-431d-82d7-31646f8a6bb5?action=share&source=collection_link&creator=26251569"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/listTasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/listTasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"listTasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/addTasks",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "heading",
+							"value": "string",
+							"description": "heading of the tasklist",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "string",
+							"description": "description of the task",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "string",
+							"description": "url of the image",
+							"type": "text"
+						},
+						{
+							"key": "priority",
+							"value": "string",
+							"description": "priority of the task",
+							"type": "text"
+						},
+						{
+							"key": "time",
+							"value": "time",
+							"description": "time of adding",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "date",
+							"description": "date of adding",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/addTasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addTasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/edittasks",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "int",
+							"description": "id of the selected task",
+							"type": "text"
+						},
+						{
+							"key": "heading",
+							"value": "string",
+							"description": "heading of the task",
+							"type": "text"
+						},
+						{
+							"key": "descrition",
+							"value": "string",
+							"description": "description of the task",
+							"type": "text"
+						},
+						{
+							"key": "priority",
+							"value": "string",
+							"description": "priority of the task(low,meduim,high)",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"value": "image",
+							"description": "image of the task",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/edittasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"edittasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/deleteTask?id=id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/deleteTask?id=id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deleteTask"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "id",
+							"description": "id of the user that to be deleted"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
