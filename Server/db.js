@@ -11,7 +11,7 @@ const db = mysql.createConnection(dbConfig);
 // ===========  Connect to the db =============
 db.connect((err) => {
   if (err) {
-    console.error("Database connection error: " + err.stack);
+    console.error("Database connection error: " + err?.stack);
     return;
   }
   console.log("Connected to the database");
@@ -20,7 +20,7 @@ db.connect((err) => {
 
   db.query("CREATE DATABASE IF NOT EXISTS tasklist", (err) => {
     if (err) {
-      console.error("Error creating database: " + err.stack);
+      console.error("Error creating database: " + err?.stack);
       return;
     }
   });
